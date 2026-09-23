@@ -55,8 +55,107 @@
 
     <section class="section container" aria-labelledby="lista-proyectos-titulo">
       <h2 id="lista-proyectos-titulo" class="visually-hidden">Lista de proyectos</h2>
-      <!-- Paso 6: filtro Todos | Web | IA | Backend -->
-      <!-- Paso 4: tres <article class="project-card"> -->
+
+      <div class="filter" role="group" aria-label="Filtrar proyectos por categoría">
+        <button class="filter__button is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filter__button" type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button class="filter__button" type="button" data-filter="ia" aria-pressed="false">IA</button>
+        <button class="filter__button" type="button" data-filter="backend" aria-pressed="false">Backend</button>
+      </div>
+      <p class="filter__status text-muted" aria-live="polite">Mostrando 3 de 3 proyectos</p>
+
+      <div class="projects-grid">
+        <article class="card project-card" data-category="ia backend" aria-labelledby="proyecto-cortes-titulo">
+          <figure class="project-card__media">
+            <img src="img/proyecto-cortes.svg" alt="Ilustración de un rostro con marcos de análisis facial, representando el sistema de recomendación de cortes" width="640" height="360" loading="lazy">
+          </figure>
+          <div class="project-card__body">
+            <span class="badge">Proyecto académico</span>
+            <h3 id="proyecto-cortes-titulo">Sistema de recomendación de cortes de cabello y barba</h3>
+            <p>
+              Aplicación que proporciona recomendaciones personalizadas de cortes de
+              cabello y barba mediante el análisis de características visuales e
+              inteligencia artificial.
+            </p>
+            <p class="project-card__problem">
+              <strong>Problema que resuelve:</strong> facilita decidir qué corte o
+              estilo se adapta mejor a las características de cada persona.
+            </p>
+            <ul class="tag-list" role="list" aria-label="Tecnologías utilizadas">
+              <li class="tag">Python</li>
+              <li class="tag">Django</li>
+              <li class="tag">OpenCV</li>
+              <li class="tag">Scikit-learn</li>
+            </ul>
+          </div>
+          <footer class="project-card__footer">
+            <span>Repositorio: próximamente</span>
+            <span>Demo: no disponible</span>
+          </footer>
+        </article>
+
+        <article class="card project-card" data-category="web backend" aria-labelledby="proyecto-citamedica-titulo">
+          <figure class="project-card__media">
+            <img src="img/proyecto-citamedica.svg" alt="Ilustración de un calendario con una cruz médica, representando el sistema CitaMedica" width="640" height="360" loading="lazy">
+          </figure>
+          <div class="project-card__body">
+            <span class="badge">Proyecto académico</span>
+            <h3 id="proyecto-citamedica-titulo">CitaMedica</h3>
+            <p>
+              Aplicación web para gestionar la información de citas médicas, con una
+              arquitectura basada en Django y una base de datos relacional.
+            </p>
+            <p class="project-card__problem">
+              <strong>Problema que resuelve:</strong> la gestión manual de pacientes y
+              citas dificulta la organización; el sistema permite administrarlas desde
+              la web.
+            </p>
+            <ul class="tag-list" role="list" aria-label="Tecnologías utilizadas">
+              <li class="tag">Python</li>
+              <li class="tag">Django</li>
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">SQL</li>
+            </ul>
+          </div>
+          <footer class="project-card__footer">
+            <span>Repositorio: próximamente</span>
+            <span>Demo: próximamente</span>
+          </footer>
+        </article>
+
+        <article class="card project-card" data-category="web backend" aria-labelledby="proyecto-gastro-titulo">
+          <figure class="project-card__media">
+            <img src="img/proyecto-gastronomia.svg" alt="Ilustración de una campana de servicio de restaurante, representando el sistema de gestión gastronómica" width="640" height="360" loading="lazy">
+          </figure>
+          <div class="project-card__body">
+            <span class="badge">Proyecto de titulación</span>
+            <h3 id="proyecto-gastro-titulo">Sistema de gestión para negocios gastronómicos</h3>
+            <p>
+              Aplicativo multiplataforma que centraliza pedidos, reservas y la
+              comunicación entre áreas: envío de pedidos a cocina en tiempo real,
+              roles diferenciados y un asistente virtual para reservas.
+            </p>
+            <p class="project-card__problem">
+              <strong>Problema que resuelve:</strong> evita la gestión manual de
+              pedidos y reservas en papel o por WhatsApp, que genera desorganización.
+            </p>
+            <ul class="tag-list" role="list" aria-label="Tecnologías utilizadas">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">Python</li>
+              <li class="tag">Django</li>
+              <li class="tag">PostgreSQL</li>
+            </ul>
+          </div>
+          <footer class="project-card__footer">
+            <span>Repositorio: próximamente</span>
+            <span>Demo: próximamente</span>
+          </footer>
+        </article>
+      </div>
     </section>
   </main>
 

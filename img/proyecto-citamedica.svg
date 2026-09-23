@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#2b2b2b"/>
+  <g fill="none" stroke="#c9a86a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Calendario -->
+    <rect x="220" y="80" width="200" height="200" rx="16"/>
+    <line x1="220" y1="130" x2="420" y2="130"/>
+    <line x1="265" y1="60" x2="265" y2="100"/>
+    <line x1="375" y1="60" x2="375" y2="100"/>
+  </g>
+  <!-- Cruz médica -->
+  <path d="M305 160 h30 v25 h25 v30 h-25 v25 h-30 v-25 h-25 v-30 h25 z" fill="#8a6d3b"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#2b2b2b"/>
+  <g fill="none" stroke="#c9a86a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Campana de servicio -->
+    <path d="M200 240 Q200 130 320 130 Q440 130 440 240"/>
+    <line x1="180" y1="240" x2="460" y2="240"/>
+    <line x1="200" y1="265" x2="440" y2="265"/>
+    <circle cx="320" cy="118" r="12"/>
+    <path d="M250 200 Q262 160 300 152"/>
+  </g>
+  <!-- Vapor -->
+  <g fill="none" stroke="#8a6d3b" stroke-width="3" stroke-linecap="round">
+    <path d="M280 90 q-10 -15 0 -30"/>
+    <path d="M360 90 q10 -15 0 -30"/>
+  </g>
+</svg>
