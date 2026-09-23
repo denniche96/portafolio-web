@@ -1,0 +1,9 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+
+# Notas privadas de la tarea (no se publican)
+PROYECTO.md

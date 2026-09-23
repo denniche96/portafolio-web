@@ -1,0 +1,76 @@
+/* ==========================================================================
+   variables.css — Sistema visual del portafolio (Design Tokens)
+   Todo color, tipografía, espaciado, borde y sombra del sitio sale de aquí.
+   ========================================================================== */
+
+:root {
+  /* Colores */
+  --color-primary: #8a6d3b;        /* dorado envejecido - acento */
+  --color-primary-hover: #735a2f;
+  --color-secondary: #2b2b2b;      /* gris carbón */
+  --color-background: #ffffff;
+  --color-surface: #f7f6f4;
+  --color-border: #e4e1dc;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+  --color-on-primary: #ffffff;
+  --color-success: #2e7d32;
+  --color-error: #c62828;
+
+  /* Tipografía */
+  --font-primary: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-h3: 1.375rem;
+  --font-size-h2: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+  --font-size-h1: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --line-height-base: 1.6;
+  --line-height-heading: 1.2;
+
+  /* Espaciado */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Bordes y radios */
+  --border-width: 1px;
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-full: 999px;
+
+  /* Sombras */
+  --shadow-card: 0 4px 12px rgb(0 0 0 / 0.08);
+  --shadow-card-hover: 0 8px 20px rgb(0 0 0 / 0.12);
+
+  /* Tamaños relevantes */
+  --container-max: 72rem;
+  --header-height: 4rem;
+  --avatar-size: clamp(8rem, 6rem + 10vw, 14rem);
+
+  /* Transiciones */
+  --transition-base: 0.2s ease;
+}
+
+/* Modo oscuro: mismas variables, otros valores (se activa desde main.js) */
+[data-theme="dark"] {
+  --color-primary: #c9a86a;
+  --color-primary-hover: #d8bb85;
+  --color-secondary: #e6e6e6;
+  --color-background: #121212;
+  --color-surface: #1e1e1e;
+  --color-border: #333333;
+  --color-text: #f0f0f0;
+  --color-text-muted: #a3a3a3;
+  --color-on-primary: #121212;
+  --color-success: #66bb6a;
+  --color-error: #ef5350;
+
+  --shadow-card: 0 4px 12px rgb(0 0 0 / 0.4);
+  --shadow-card-hover: 0 8px 20px rgb(0 0 0 / 0.5);
+}
