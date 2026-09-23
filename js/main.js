@@ -60,8 +60,80 @@ function initProjectFilter() {
 }
 
 /* ---------- 4. Validación del formulario ---------- */
+const CONTACT_EMAIL = 'dennisse.cavero@gmail.com';
+
+// Cada regla devuelve el mensaje de error, o '' si el valor es válido
+const contactRules = {
+  nombre(value) {
+    if (!value) return 'Ingresa tu nombre.';
+    if (value.length < 3) return 'El nombre debe tener al menos 3 caracteres.';
+    if (!/^[\p{L}\s'-]+$/u.test(value)) return 'El nombre solo puede contener letras y espacios.';
+    return '';
+  },
+  correo(value) {
+    if (!value) return 'Ingresa tu correo electrónico.';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+      return 'Ingresa un correo válido, por ejemplo nombre@dominio.com.';
+    }
+    return '';
+  },
+  mensaje(value) {
+    if (!value) return 'Escribe tu mensaje.';
+    if (value.length < 10) return 'El mensaje debe tener al menos 10 caracteres.';
+    return '';
+  },
+};
+
 function initContactForm() {
-  // TODO (paso 6): validar nombre, correo y mensaje y mostrar errores claros
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  // Con JS activo usamos nuestros mensajes en lugar de los del navegador
+  form.noValidate = true;
+  const status = form.querySelector('.form__status');
+  const fields = Object.keys(contactRules).map((name) => form.elements[name]);
+
+  function validateField(field) {
+    const message = contactRules[field.name](field.value.trim());
+    field.setAttribute('aria-invalid', String(Boolean(message)));
+    document.getElementById(`${field.id}-error`).textContent = message;
+    return !message;
+  }
+
+  function showStatus(text, type) {
+    status.textContent = text;
+    status.className = `form__status form__status--${type}`;
+  }
+
+  fields.forEach((field) => {
+    // Al salir del campo solo se valida si ya se escribió algo
+    field.addEventListener('blur', () => {
+      if (field.value.trim()) validateField(field);
+    });
+    // Si el campo tenía error, se revalida mientras se corrige
+    field.addEventListener('input', () => {
+      if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+    });
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const invalid = fields.filter((field) => !validateField(field));
+    if (invalid.length) {
+      invalid[0].focus();
+      showStatus('Revisa los campos marcados antes de enviar.', 'error');
+      return;
+    }
+
+    // Sin servidor: se abre el cliente de correo con el mensaje ya redactado
+    const [nombre, correo, mensaje] = fields.map((field) => field.value.trim());
+    const subject = `Contacto desde el portafolio: ${nombre}`;
+    const body = `${mensaje}\n\n${nombre}\n${correo}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    showStatus('Todo correcto. Se abrirá tu aplicación de correo con el mensaje listo para enviar.', 'success');
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
