@@ -54,14 +54,76 @@
     </header>
 
     <section class="section container" aria-labelledby="perfil-titulo">
-      <h2 id="perfil-titulo">Perfil</h2>
-      <!-- Paso 4: texto de presentación -->
+      <div class="about">
+        <div class="about__text">
+          <h2 id="perfil-titulo">Perfil</h2>
+          <p>
+            Soy estudiante de octavo semestre de Ingeniería en Software en la
+            Universidad Estatal de Milagro (UNEMI). Me interesa especialmente el
+            desarrollo web y la posibilidad de crear soluciones tecnológicas que
+            ayuden a resolver problemas reales.
+          </p>
+          <p>
+            Durante la carrera he desarrollado aplicaciones y proyectos académicos
+            en los que he trabajado tanto el frontend como el backend, el diseño de
+            bases de datos y las herramientas que acompañan a cada proyecto, desde
+            el control de versiones hasta los diagramas y prototipos.
+          </p>
+          <p>
+            Actualmente sigo fortaleciendo mis conocimientos a través de proyectos
+            académicos y personales, con el objetivo de construir aplicaciones cada
+            vez más completas, ordenadas y fáciles de usar.
+          </p>
+        </div>
+
+        <aside class="card facts" aria-labelledby="datos-titulo">
+          <h3 id="datos-titulo">Datos rápidos</h3>
+          <dl class="facts__list">
+            <div>
+              <dt>Carrera</dt>
+              <dd>Ingeniería en Software</dd>
+            </div>
+            <div>
+              <dt>Universidad</dt>
+              <dd>Universidad Estatal de Milagro (UNEMI)</dd>
+            </div>
+            <div>
+              <dt>Semestre</dt>
+              <dd>Octavo, en curso</dd>
+            </div>
+            <div>
+              <dt>Área de interés</dt>
+              <dd>Desarrollo web</dd>
+            </div>
+            <div>
+              <dt>Correo</dt>
+              <dd><a href="mailto:dennisse.cavero@gmail.com">dennisse.cavero@gmail.com</a></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
     </section>
 
     <section class="section section--surface" aria-labelledby="formacion-titulo">
       <div class="container">
         <h2 id="formacion-titulo">Formación académica</h2>
-        <!-- Paso 4: Ingeniería en Software — UNEMI, octavo semestre -->
+        <article class="card education">
+          <div class="education__header">
+            <h3>Ingeniería en Software</h3>
+            <span class="badge">En curso</span>
+          </div>
+          <p>Universidad Estatal de Milagro (UNEMI)</p>
+          <p class="text-muted">Octavo semestre</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container cta" aria-labelledby="cta-titulo">
+      <h2 id="cta-titulo">¿Quieres ver lo que he construido?</h2>
+      <p class="text-muted">Revisa mis proyectos académicos o las tecnologías con las que trabajo.</p>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="proyectos.html">Ver proyectos</a>
+        <a class="btn btn--secondary" href="skills.html">Ver habilidades</a>
       </div>
     </section>
   </main>

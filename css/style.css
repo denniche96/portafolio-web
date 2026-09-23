@@ -287,6 +287,92 @@ main {
   box-shadow: var(--shadow-card);
 }
 
+/* ---------- Componente: Card (base reutilizable) ---------- */
+.card {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+/* En secciones con fondo surface, la card usa el fondo principal */
+.section--surface .card {
+  background-color: var(--color-background);
+}
+
+/* ---------- Sección: Sobre mí ---------- */
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  gap: var(--space-xl);
+}
+
+.about__text h2 {
+  margin-bottom: var(--space-md);
+}
+
+.about__text p + p {
+  margin-top: var(--space-md);
+}
+
+.facts h3 {
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-lg);
+}
+
+.facts__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.facts__list dt {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.facts__list dd {
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  overflow-wrap: anywhere;
+}
+
+.education {
+  max-width: 40rem;
+  margin-top: var(--space-lg);
+  border-left: 4px solid var(--color-primary);
+}
+
+.education__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+/* ---------- Componente: Llamado a la acción ---------- */
+.cta {
+  text-align: center;
+}
+
+.cta p {
+  margin-top: var(--space-sm);
+}
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
 /* ---------- Componente: Badge ---------- */
 .badge {
   display: inline-block;
@@ -305,14 +391,6 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   gap: var(--space-lg);
-}
-
-.skill-group {
-  padding: var(--space-lg);
-  background-color: var(--color-surface);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
 }
 
 .skill-group__title {
@@ -423,6 +501,11 @@ main {
 
   .hero__actions {
     justify-content: center;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 }
 
