@@ -23,8 +23,33 @@ function initMenu() {
 }
 
 /* ---------- 2. Modo claro/oscuro ---------- */
+// El tema inicial lo aplica theme-init.js; aquí solo se gestiona el botón
+const THEME_KEY = 'theme';
+
 function initTheme() {
-  // TODO (paso 6): leer/guardar preferencia en localStorage y aplicar data-theme en <html>
+  const root = document.documentElement;
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return;
+
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    root.setAttribute('data-theme', theme);
+    toggle.setAttribute('aria-pressed', String(isDark));
+    toggle.textContent = isDark ? '☀︎' : '☾';
+  }
+
+  applyTheme(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+
+    try {
+      localStorage.setItem(THEME_KEY, next);
+    } catch (error) {
+      // Sin almacenamiento el tema funciona igual, solo no se recuerda
+    }
+  });
 }
 
 /* ---------- 3. Filtro de proyectos ---------- */

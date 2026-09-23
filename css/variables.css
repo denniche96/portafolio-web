@@ -54,8 +54,14 @@
   --header-height: 4rem;
   --avatar-size: clamp(8rem, 6rem + 10vw, 14rem);
 
+  /* Foco de campos de formulario */
+  --focus-ring: 0 0 0 3px rgb(138 109 59 / 0.25);
+
   /* Transiciones */
   --transition-base: 0.2s ease;
+
+  /* Controles nativos (scroll, autocompletado) acordes al tema */
+  color-scheme: light;
 }
 
 /* Modo oscuro: mismas variables, otros valores (se activa desde main.js) */
@@ -74,4 +80,7 @@
 
   --shadow-card: 0 4px 12px rgb(0 0 0 / 0.4);
   --shadow-card-hover: 0 8px 20px rgb(0 0 0 / 0.5);
+  --focus-ring: 0 0 0 3px rgb(201 168 106 / 0.3);
+
+  color-scheme: dark;
 }
