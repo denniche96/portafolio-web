@@ -29,7 +29,34 @@ function initTheme() {
 
 /* ---------- 3. Filtro de proyectos ---------- */
 function initProjectFilter() {
-  // TODO (paso 6): filtrar las cards de proyecto según el botón activo
+  const buttons = document.querySelectorAll('.filter__button');
+  const cards = document.querySelectorAll('.project-card');
+  const status = document.querySelector('.filter__status');
+  if (!buttons.length || !cards.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      let visibles = 0;
+
+      buttons.forEach((other) => {
+        const isActive = other === button;
+        other.classList.toggle('is-active', isActive);
+        other.setAttribute('aria-pressed', String(isActive));
+      });
+
+      cards.forEach((card) => {
+        const categories = card.dataset.category.split(' ');
+        const show = filter === 'todos' || categories.includes(filter);
+        card.hidden = !show;
+        if (show) visibles++;
+      });
+
+      if (status) {
+        status.textContent = `Mostrando ${visibles} de ${cards.length} proyectos`;
+      }
+    });
+  });
 }
 
 /* ---------- 4. Validación del formulario ---------- */
