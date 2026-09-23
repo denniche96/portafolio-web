@@ -53,15 +53,49 @@
       <p class="text-muted">¿Tienes una propuesta o quieres conversar sobre un proyecto? Escríbeme.</p>
     </header>
 
-    <section class="section container" aria-labelledby="formulario-titulo">
-      <h2 id="formulario-titulo">Envíame un mensaje</h2>
-      <!-- Paso 4: formulario (nombre, correo, mensaje) con <label> asociados -->
-    </section>
+    <div class="section container contact">
+      <section aria-labelledby="formulario-titulo">
+        <h2 id="formulario-titulo">Envíame un mensaje</h2>
+        <p class="text-muted contact__note">Todos los campos son obligatorios.</p>
 
-    <aside class="section container" aria-labelledby="otros-medios-titulo">
-      <h2 id="otros-medios-titulo">Otros medios</h2>
-      <!-- Paso 4: correo profesional y GitHub -->
-    </aside>
+        <form class="card form" id="contact-form" action="mailto:dennisse.cavero@gmail.com" method="post" enctype="text/plain">
+          <div class="form__field">
+            <label class="form__label" for="nombre">Nombre</label>
+            <input class="form__input" id="nombre" name="nombre" type="text" autocomplete="name" required minlength="3" maxlength="80" aria-describedby="nombre-error">
+            <p class="form__error" id="nombre-error"></p>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="correo">Correo electrónico</label>
+            <input class="form__input" id="correo" name="correo" type="email" autocomplete="email" required maxlength="120" placeholder="nombre@dominio.com" aria-describedby="correo-error">
+            <p class="form__error" id="correo-error"></p>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="mensaje">Mensaje</label>
+            <textarea class="form__input form__textarea" id="mensaje" name="mensaje" rows="6" required minlength="10" maxlength="1000" aria-describedby="mensaje-error"></textarea>
+            <p class="form__error" id="mensaje-error"></p>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+          <p class="form__status" role="status"></p>
+        </form>
+      </section>
+
+      <aside class="card contact__aside" aria-labelledby="otros-medios-titulo">
+        <h2 id="otros-medios-titulo">Otros medios</h2>
+        <ul class="contact-links" role="list">
+          <li>
+            <span class="contact-links__label">Correo profesional</span>
+            <a href="mailto:dennisse.cavero@gmail.com">dennisse.cavero@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-links__label">GitHub</span>
+            <a href="https://github.com/denniche96" target="_blank" rel="noopener noreferrer">github.com/denniche96</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
   </main>
 
   <footer class="site-footer">

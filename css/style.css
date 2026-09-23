@@ -560,6 +560,114 @@ main {
   color: var(--color-text-muted);
 }
 
+/* ---------- Sección: Contacto ---------- */
+.contact {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  gap: var(--space-xl);
+}
+
+.contact__note {
+  margin-block: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+.contact__aside h2 {
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-lg);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact-links li {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-links a {
+  overflow-wrap: anywhere;
+}
+
+.contact-links__label {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Componente: Formulario (input / textarea) ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  width: 100%;
+}
+
+.form__label {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.form__input {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: border-color var(--transition-base);
+}
+
+.form__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(138 109 59 / 0.2);
+}
+
+.form__input[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+
+.form__textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.form__error {
+  min-height: 1.25em;
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+}
+
+.form__status {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.form__status--success {
+  color: var(--color-success);
+}
+
+.form__status--error {
+  color: var(--color-error);
+}
+
 /* ---------- Componente: Footer ---------- */
 .site-footer {
   padding-block: var(--space-lg);
@@ -626,7 +734,8 @@ main {
     justify-content: center;
   }
 
-  .about {
+  .about,
+  .contact {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
