@@ -1,4 +1,4 @@
-# Portafolio Web Personal — Angela Cavero
+# Portafolio Web Personal — Dennisse Cavero
 
 Portafolio web personal e interactivo desarrollado para la tarea S2-TAREA_1 del curso
 **Desarrollo Web [ISO08DW]** de la Universidad Estatal de Milagro (UNEMI).
@@ -56,4 +56,4 @@ _Pendiente._
 
 ## Autora
 
-Angela Cavero · [dennisse.cavero@gmail.com](mailto:dennisse.cavero@gmail.com)
+Angela Dennisse Cavero Mosquera · [dennisse.cavero@gmail.com](mailto:dennisse.cavero@gmail.com)
