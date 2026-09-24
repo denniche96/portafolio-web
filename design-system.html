@@ -11,9 +11,15 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Design System y componentes | Dennisse Cavero">
   <meta property="og:description" content="Colores, tipografía, espaciado y componentes que forman el sistema visual del portafolio.">
-  <meta property="og:image" content="img/avatar.svg">
+  <meta property="og:url" content="https://denniche96.github.io/portafolio-web/design-system.html">
+  <meta property="og:image" content="https://denniche96.github.io/portafolio-web/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tarjeta del portafolio de Dennisse Cavero, estudiante de Ingeniería en Software">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:locale" content="es_EC">
 
+  <link rel="canonical" href="https://denniche96.github.io/portafolio-web/design-system.html">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +65,7 @@
       </p>
 
       <nav class="ds-toc" aria-label="Contenido del Design System">
-        <ul class="ds-toc__list" role="list">
+        <ul class="ds-toc__list">
           <li><a href="#colores-titulo">Colores</a></li>
           <li><a href="#tipografia-titulo">Tipografía</a></li>
           <li><a href="#espaciado-titulo">Espaciado</a></li>
@@ -232,7 +238,7 @@
         (<code>gap</code>). 1rem = 16px.
       </p>
 
-      <ul class="ds-spacing" role="list">
+      <ul class="ds-spacing">
         <li class="ds-spacing__row">
           <code>--space-xs</code><span>0.25rem · 4px</span>
           <span class="ds-spacing__bar ds-spacing__bar--xs"></span>
@@ -299,7 +305,7 @@
         <div class="ds-preview ds-preview--block" inert>
           <div class="navbar">
             <span class="navbar__logo">D<span>C</span></span>
-            <ul class="navbar__menu" role="list">
+            <ul class="navbar__menu">
               <li><span class="navbar__link" aria-current="page">Inicio</span></li>
               <li><span class="navbar__link">Sobre mí</span></li>
               <li><span class="navbar__link">Proyectos</span></li>
@@ -333,7 +339,7 @@
         <div class="ds-preview">
           <span class="badge">Experiencia académica</span>
           <span class="badge">Proyecto académico · Colaborativo</span>
-          <ul class="tag-list" role="list">
+          <ul class="tag-list">
             <li class="tag">Python</li>
             <li class="tag">Django</li>
             <li class="tag">PostgreSQL</li>
@@ -378,7 +384,7 @@
 
           <div class="card skill-group">
             <p class="text-h3 skill-group__title">Skill</p>
-            <ul class="skill-list" role="list">
+            <ul class="skill-list">
               <li class="skill">
                 <span class="skill__icon" aria-hidden="true">JS</span>
                 <div class="skill__body">
@@ -401,14 +407,14 @@
         <div class="ds-preview ds-preview--grid">
           <div class="card project-card">
             <figure class="project-card__media">
-              <img src="img/proyecto-citamedica.svg" alt="Ilustración de un calendario con una cruz médica, ejemplo de imagen de card" width="640" height="360" loading="lazy">
+              <img src="img/proyecto-citamedica.svg" alt="Ilustración de un calendario con una cruz médica, ejemplo de imagen de card" width="640" height="360">
             </figure>
             <div class="project-card__body">
               <span class="badge">Proyecto académico · Individual</span>
               <p class="text-h3">CitaMedica</p>
               <p>Aplicación web para gestionar la información de citas médicas.</p>
               <p class="project-card__problem"><strong>Problema que resuelve:</strong> facilita la administración de pacientes y citas.</p>
-              <ul class="tag-list" role="list">
+              <ul class="tag-list">
                 <li class="tag">Python</li>
                 <li class="tag">Django</li>
                 <li class="tag">SQL</li>
@@ -474,7 +480,7 @@
               </div>
               <div>
                 <p class="site-footer__title">Navegación</p>
-                <ul class="site-footer__list" role="list">
+                <ul class="site-footer__list site-footer__list--nav">
                   <li>Inicio</li>
                   <li>Proyectos</li>
                   <li>Contacto</li>
@@ -482,7 +488,7 @@
               </div>
               <div>
                 <p class="site-footer__title">Contacto</p>
-                <ul class="site-footer__list" role="list">
+                <ul class="site-footer__list">
                   <li>dennisse.cavero@gmail.com</li>
                   <li>GitHub: denniche96</li>
                 </ul>
@@ -506,7 +512,7 @@
 
       <nav aria-labelledby="footer-nav-titulo">
         <h2 id="footer-nav-titulo" class="site-footer__title">Navegación</h2>
-        <ul class="site-footer__list site-footer__list--nav" role="list">
+        <ul class="site-footer__list site-footer__list--nav">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="sobre-mi.html">Sobre mí</a></li>
           <li><a href="skills.html">Habilidades</a></li>
@@ -518,7 +524,7 @@
 
       <div>
         <h2 class="site-footer__title">Contacto</h2>
-        <ul class="site-footer__list" role="list">
+        <ul class="site-footer__list">
           <li><a href="mailto:dennisse.cavero@gmail.com">dennisse.cavero@gmail.com</a></li>
           <li><a href="https://github.com/denniche96" target="_blank" rel="noopener noreferrer">GitHub: denniche96</a></li>
         </ul>

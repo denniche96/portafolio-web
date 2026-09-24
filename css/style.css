@@ -43,7 +43,14 @@ button {
   font: inherit;
 }
 
-ul[role="list"] {
+/* Listas usadas como componentes (sin viñetas) */
+.highlights,
+.skill-list,
+.tag-list,
+.contact-links,
+.site-footer__list,
+.ds-toc__list,
+.ds-spacing {
   list-style: none;
   padding: 0;
 }
@@ -118,6 +125,11 @@ main {
 
 .page-header {
   padding-block: var(--space-xl) var(--space-lg);
+}
+
+/* La primera sección tras el encabezado de página no repite el espacio superior */
+.page-header + .section {
+  padding-top: 0;
 }
 
 .page-header p {
@@ -198,6 +210,13 @@ main {
 .navbar__link:hover,
 .navbar__link[aria-current="page"] {
   color: var(--color-primary);
+}
+
+/* Subrayado que marca la página actual */
+.navbar__link[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5em;
 }
 
 .navbar__actions {
