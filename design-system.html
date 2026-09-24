@@ -51,27 +51,422 @@
   <main id="contenido">
     <header class="page-header container">
       <h1>Design System</h1>
-      <p class="text-muted">Decisiones visuales y componentes reutilizables con los que está construido este portafolio.</p>
+      <p class="text-muted">
+        Decisiones visuales y componentes reutilizables con los que está construido
+        este portafolio. Todo lo que aparece aquí se genera con las mismas variables
+        de <code>css/variables.css</code> y las mismas clases de <code>css/style.css</code>
+        que usa el resto del sitio.
+      </p>
+
+      <nav class="ds-toc" aria-label="Contenido del Design System">
+        <ul class="ds-toc__list" role="list">
+          <li><a href="#colores-titulo">Colores</a></li>
+          <li><a href="#tipografia-titulo">Tipografía</a></li>
+          <li><a href="#espaciado-titulo">Espaciado</a></li>
+          <li><a href="#forma-titulo">Bordes y sombras</a></li>
+          <li><a href="#componentes-titulo">Componentes</a></li>
+        </ul>
+      </nav>
     </header>
 
+    <!-- ===================== Colores ===================== -->
     <section class="section container" aria-labelledby="colores-titulo">
       <h2 id="colores-titulo">Colores</h2>
-      <!-- Paso 7: swatches de cada variable de color con su valor hex -->
+      <p class="ds-intro text-muted">
+        Cada muestra usa su variable, así que cambia al activar el modo oscuro.
+        Se indican los valores de ambos temas.
+      </p>
+
+      <div class="ds-swatches">
+        <figure class="swatch">
+          <div class="swatch__color swatch--primary"></div>
+          <figcaption>
+            <strong>Primary</strong>
+            <code>--color-primary</code>
+            <span>Claro #8a6d3b · Oscuro #c9a86a</span>
+            <span>Acento: botones, enlaces, estados activos.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--primary-hover"></div>
+          <figcaption>
+            <strong>Primary hover</strong>
+            <code>--color-primary-hover</code>
+            <span>Claro #735a2f · Oscuro #d8bb85</span>
+            <span>Botones y enlaces al pasar el cursor.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--secondary"></div>
+          <figcaption>
+            <strong>Secondary</strong>
+            <code>--color-secondary</code>
+            <span>Claro #2b2b2b · Oscuro #e6e6e6</span>
+            <span>Encabezados y logotipo.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--background"></div>
+          <figcaption>
+            <strong>Background</strong>
+            <code>--color-background</code>
+            <span>Claro #ffffff · Oscuro #121212</span>
+            <span>Fondo general de la página.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--surface"></div>
+          <figcaption>
+            <strong>Surface</strong>
+            <code>--color-surface</code>
+            <span>Claro #f7f6f4 · Oscuro #1e1e1e</span>
+            <span>Cards, secciones alternas y footer.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--border"></div>
+          <figcaption>
+            <strong>Border</strong>
+            <code>--color-border</code>
+            <span>Claro #e4e1dc · Oscuro #333333</span>
+            <span>Bordes y separadores.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--text"></div>
+          <figcaption>
+            <strong>Text</strong>
+            <code>--color-text</code>
+            <span>Claro #1a1a1a · Oscuro #f0f0f0</span>
+            <span>Texto principal.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--text-muted"></div>
+          <figcaption>
+            <strong>Text muted</strong>
+            <code>--color-text-muted</code>
+            <span>Claro #6b6b6b · Oscuro #a3a3a3</span>
+            <span>Texto secundario y descripciones.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--on-primary"></div>
+          <figcaption>
+            <strong>On primary</strong>
+            <code>--color-on-primary</code>
+            <span>Claro #ffffff · Oscuro #121212</span>
+            <span>Texto sobre fondo primary.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--success"></div>
+          <figcaption>
+            <strong>Success</strong>
+            <code>--color-success</code>
+            <span>Claro #2e7d32 · Oscuro #66bb6a</span>
+            <span>Mensaje de formulario correcto.</span>
+          </figcaption>
+        </figure>
+        <figure class="swatch">
+          <div class="swatch__color swatch--error"></div>
+          <figcaption>
+            <strong>Error</strong>
+            <code>--color-error</code>
+            <span>Claro #c62828 · Oscuro #ef5350</span>
+            <span>Errores de validación.</span>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="section container" aria-labelledby="tipografia-titulo">
-      <h2 id="tipografia-titulo">Tipografía</h2>
-      <!-- Paso 7: ejemplos de H1, H2, H3, párrafo, texto secundario y enlace -->
+    <!-- ===================== Tipografía ===================== -->
+    <section class="section section--surface" aria-labelledby="tipografia-titulo">
+      <div class="container">
+        <h2 id="tipografia-titulo">Tipografía</h2>
+        <p class="ds-intro text-muted">
+          Fuente <strong>Poppins</strong> (<code>--font-primary</code>) con pesos 400, 500 y 600.
+          Los ejemplos de encabezado usan las clases <code>.text-h1</code>,
+          <code>.text-h2</code> y <code>.text-h3</code>, que comparten estilo con
+          <code>h1</code>–<code>h3</code>, para mantener un único <code>h1</code> por página.
+        </p>
+
+        <dl class="ds-type">
+          <div class="ds-type__row">
+            <dt>H1 <code>--font-size-h1</code> · 2–3rem · 600</dt>
+            <dd><p class="text-h1">Angela Cavero</p></dd>
+          </div>
+          <div class="ds-type__row">
+            <dt>H2 <code>--font-size-h2</code> · 1.5–2rem · 600</dt>
+            <dd><p class="text-h2">Proyectos destacados</p></dd>
+          </div>
+          <div class="ds-type__row">
+            <dt>H3 <code>--font-size-h3</code> · 1.375rem · 600</dt>
+            <dd><p class="text-h3">Sistema de gestión para negocios gastronómicos</p></dd>
+          </div>
+          <div class="ds-type__row">
+            <dt>Párrafo <code>--font-size-base</code> · 1rem · 400</dt>
+            <dd><p>Estudiante de Ingeniería en Software interesada en el desarrollo web y la creación de soluciones tecnológicas.</p></dd>
+          </div>
+          <div class="ds-type__row">
+            <dt>Texto secundario <code>.text-muted</code></dt>
+            <dd><p class="text-muted">Tecnologías que he utilizado durante la carrera.</p></dd>
+          </div>
+          <div class="ds-type__row">
+            <dt>Texto pequeño <code>--font-size-sm</code> · 0.875rem</dt>
+            <dd><p class="ds-sample-sm">Problema que resuelve y descripciones de skills.</p></dd>
+          </div>
+          <div class="ds-type__row">
+            <dt>Enlace <code>a</code></dt>
+            <dd><p><a href="proyectos.html">Ver proyectos destacados</a></p></dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
+    <!-- ===================== Espaciado ===================== -->
     <section class="section container" aria-labelledby="espaciado-titulo">
       <h2 id="espaciado-titulo">Espaciado</h2>
-      <!-- Paso 7: escala xs, sm, md, lg, xl en rem -->
+      <p class="ds-intro text-muted">
+        Escala usada en márgenes, rellenos y separación entre elementos
+        (<code>gap</code>). 1rem = 16px.
+      </p>
+
+      <ul class="ds-spacing" role="list">
+        <li class="ds-spacing__row">
+          <code>--space-xs</code><span>0.25rem · 4px</span>
+          <span class="ds-spacing__bar ds-spacing__bar--xs"></span>
+        </li>
+        <li class="ds-spacing__row">
+          <code>--space-sm</code><span>0.5rem · 8px</span>
+          <span class="ds-spacing__bar ds-spacing__bar--sm"></span>
+        </li>
+        <li class="ds-spacing__row">
+          <code>--space-md</code><span>1rem · 16px</span>
+          <span class="ds-spacing__bar ds-spacing__bar--md"></span>
+        </li>
+        <li class="ds-spacing__row">
+          <code>--space-lg</code><span>2rem · 32px</span>
+          <span class="ds-spacing__bar ds-spacing__bar--lg"></span>
+        </li>
+        <li class="ds-spacing__row">
+          <code>--space-xl</code><span>4rem · 64px</span>
+          <span class="ds-spacing__bar ds-spacing__bar--xl"></span>
+        </li>
+      </ul>
     </section>
 
+    <!-- ===================== Bordes y sombras ===================== -->
+    <section class="section section--surface" aria-labelledby="forma-titulo">
+      <div class="container">
+        <h2 id="forma-titulo">Bordes y sombras</h2>
+        <p class="ds-intro text-muted">Radios de borde y sombras discretas para dar profundidad a las cards.</p>
+
+        <div class="ds-shapes">
+          <figure class="ds-shape ds-shape--radius-sm">
+            <figcaption><code>--radius-sm</code> 0.5rem<br>Inputs, tags, íconos</figcaption>
+          </figure>
+          <figure class="ds-shape ds-shape--radius-md">
+            <figcaption><code>--radius-md</code> 1rem<br>Cards</figcaption>
+          </figure>
+          <figure class="ds-shape ds-shape--radius-full">
+            <figcaption><code>--radius-full</code><br>Botones, badges</figcaption>
+          </figure>
+          <figure class="ds-shape ds-shape--shadow">
+            <figcaption><code>--shadow-card</code><br>Sombra de cards</figcaption>
+          </figure>
+          <figure class="ds-shape ds-shape--shadow-hover">
+            <figcaption><code>--shadow-card-hover</code><br>Card de proyecto al pasar el cursor</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Componentes ===================== -->
     <section class="section container" aria-labelledby="componentes-titulo">
       <h2 id="componentes-titulo">Componentes</h2>
-      <!-- Paso 7: navbar, botones, card de proyecto, badge, input, textarea, footer -->
+      <p class="ds-intro text-muted">
+        Ejemplos en vivo de los componentes reutilizables del sitio, con las clases que los generan.
+      </p>
+
+      <article class="ds-component" aria-labelledby="comp-navbar">
+        <h3 id="comp-navbar">Navbar</h3>
+        <p class="text-muted">
+          <code>.navbar</code>, <code>.navbar__logo</code>, <code>.navbar__link</code>,
+          <code>.icon-button</code>. Barra fija en todas las páginas; en móvil el menú se
+          abre con el botón ☰. Vista de ejemplo (no interactiva):
+        </p>
+        <div class="ds-preview ds-preview--block" inert>
+          <div class="navbar">
+            <span class="navbar__logo">A<span>C</span></span>
+            <ul class="navbar__menu" role="list">
+              <li><span class="navbar__link" aria-current="page">Inicio</span></li>
+              <li><span class="navbar__link">Sobre mí</span></li>
+              <li><span class="navbar__link">Proyectos</span></li>
+            </ul>
+            <span class="icon-button">☾</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="ds-component" aria-labelledby="comp-botones">
+        <h3 id="comp-botones">Botones</h3>
+        <p class="text-muted">
+          <code>.btn .btn--primary</code> para la acción principal y
+          <code>.btn .btn--secondary</code> para la secundaria. <code>.icon-button</code>
+          para acciones con ícono (tema, menú).
+        </p>
+        <div class="ds-preview">
+          <a class="btn btn--primary" href="proyectos.html">Ver proyectos</a>
+          <a class="btn btn--secondary" href="contacto.html">Contactarme</a>
+          <span class="icon-button" aria-hidden="true">☾</span>
+          <span class="icon-button" aria-hidden="true">☰</span>
+        </div>
+      </article>
+
+      <article class="ds-component" aria-labelledby="comp-badge">
+        <h3 id="comp-badge">Badge y tag</h3>
+        <p class="text-muted">
+          <code>.badge</code> indica un estado o tipo (nivel de skill, tipo de proyecto).
+          <code>.tag</code> lista tecnologías dentro de una card.
+        </p>
+        <div class="ds-preview">
+          <span class="badge">Experiencia académica</span>
+          <span class="badge">Proyecto académico</span>
+          <ul class="tag-list" role="list">
+            <li class="tag">Python</li>
+            <li class="tag">Django</li>
+            <li class="tag">PostgreSQL</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="ds-component" aria-labelledby="comp-filtro">
+        <h3 id="comp-filtro">Filtro</h3>
+        <p class="text-muted">
+          <code>.filter</code> y <code>.filter__button</code>; el botón activo lleva
+          <code>.is-active</code>. Funciona en <a href="proyectos.html">Proyectos</a>. Vista de ejemplo:
+        </p>
+        <div class="ds-preview" inert>
+          <div class="filter">
+            <span class="filter__button is-active">Todos</span>
+            <span class="filter__button">Web</span>
+            <span class="filter__button">IA</span>
+            <span class="filter__button">Backend</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="ds-component" aria-labelledby="comp-card">
+        <h3 id="comp-card">Card</h3>
+        <p class="text-muted">
+          <code>.card</code> es la base (fondo, borde, radio y sombra). Se combina con
+          <code>.skill-group</code>, <code>.project-card</code>, <code>.facts</code> y
+          <code>.education</code>.
+        </p>
+        <div class="ds-preview ds-preview--grid">
+          <div class="card">
+            <p class="text-h3">Card base</p>
+            <p class="text-muted">Contenedor reutilizable para agrupar información.</p>
+          </div>
+
+          <div class="card skill-group">
+            <p class="text-h3 skill-group__title">Skill</p>
+            <ul class="skill-list" role="list">
+              <li class="skill">
+                <span class="skill__icon" aria-hidden="true">JS</span>
+                <div class="skill__body">
+                  <p class="skill__name">JavaScript</p>
+                  <p class="skill__description">Interactividad y manipulación del DOM.</p>
+                  <span class="badge">Experiencia académica</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="ds-component" aria-labelledby="comp-proyecto">
+        <h3 id="comp-proyecto">Card de proyecto</h3>
+        <p class="text-muted">
+          <code>.project-card</code> con <code>__media</code>, <code>__body</code> y
+          <code>__footer</code>. Se reutiliza para cada proyecto.
+        </p>
+        <div class="ds-preview ds-preview--grid">
+          <div class="card project-card">
+            <figure class="project-card__media">
+              <img src="img/proyecto-citamedica.svg" alt="Ilustración de un calendario con una cruz médica, ejemplo de imagen de card" width="640" height="360" loading="lazy">
+            </figure>
+            <div class="project-card__body">
+              <span class="badge">Proyecto académico</span>
+              <p class="text-h3">CitaMedica</p>
+              <p>Aplicación web para gestionar la información de citas médicas.</p>
+              <p class="project-card__problem"><strong>Problema que resuelve:</strong> facilita la administración de pacientes y citas.</p>
+              <ul class="tag-list" role="list">
+                <li class="tag">Python</li>
+                <li class="tag">Django</li>
+                <li class="tag">SQL</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <span>Repositorio: próximamente</span>
+              <span>Demo: próximamente</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="ds-component" aria-labelledby="comp-form">
+        <h3 id="comp-form">Formulario: input y textarea</h3>
+        <p class="text-muted">
+          <code>.form__field</code>, <code>.form__label</code>, <code>.form__input</code>,
+          <code>.form__textarea</code>, <code>.form__error</code> y <code>.form__status</code>.
+          Estados normal, error y mensajes de resultado.
+        </p>
+        <div class="ds-preview ds-preview--block">
+          <div class="form">
+            <div class="form__field">
+              <label class="form__label" for="ds-nombre">Campo normal</label>
+              <input class="form__input" id="ds-nombre" type="text" placeholder="Escribe aquí">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="ds-correo">Campo con error</label>
+              <input class="form__input" id="ds-correo" type="email" value="correo-invalido" aria-invalid="true" aria-describedby="ds-correo-error">
+              <p class="form__error" id="ds-correo-error">Ingresa un correo válido, por ejemplo nombre@dominio.com.</p>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="ds-mensaje">Textarea</label>
+              <textarea class="form__input form__textarea" id="ds-mensaje" rows="3" placeholder="Escribe tu mensaje"></textarea>
+            </div>
+            <p class="form__status form__status--success">Mensaje de éxito.</p>
+            <p class="form__status form__status--error">Mensaje de error.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="ds-component" aria-labelledby="comp-avatar">
+        <h3 id="comp-avatar">Avatar</h3>
+        <p class="text-muted"><code>.avatar</code>: imagen circular con sombra usada en Inicio.</p>
+        <div class="ds-preview">
+          <img class="avatar ds-avatar-sm" src="img/avatar.svg" alt="Avatar con las iniciales AC" width="240" height="240">
+        </div>
+      </article>
+
+      <article class="ds-component" aria-labelledby="comp-footer">
+        <h3 id="comp-footer">Footer</h3>
+        <p class="text-muted"><code>.site-footer</code>: presente en todas las páginas con derechos, correo y GitHub. Vista de ejemplo:</p>
+        <div class="ds-preview ds-preview--block ds-preview--flush" inert>
+          <div class="site-footer">
+            <div class="site-footer__inner ds-footer-inner">
+              <p>&copy; 2026 Angela Cavero · Portafolio académico — UNEMI</p>
+              <ul class="site-footer__links" role="list">
+                <li><span>dennisse.cavero@gmail.com</span></li>
+                <li><span>GitHub: denniche96</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
 

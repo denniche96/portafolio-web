@@ -54,17 +54,30 @@ ul[role="list"] {
 }
 
 /* ---------- Tipografía ---------- */
+/* Las clases .text-h* permiten mostrar el estilo de un encabezado sin
+   romper la jerarquía (se usan en el Design System) */
 h1,
 h2,
-h3 {
+h3,
+.text-h1,
+.text-h2,
+.text-h3 {
   line-height: var(--line-height-heading);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text);
+  color: var(--color-secondary);
 }
 
-h1 { font-size: var(--font-size-h1); }
-h2 { font-size: var(--font-size-h2); }
-h3 { font-size: var(--font-size-h3); }
+h1, .text-h1 { font-size: var(--font-size-h1); }
+h2, .text-h2 { font-size: var(--font-size-h2); }
+h3, .text-h3 { font-size: var(--font-size-h3); }
+
+code {
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
 
 a {
   color: var(--color-primary);
@@ -159,7 +172,7 @@ main {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.1em;
-  color: var(--color-text);
+  color: var(--color-secondary);
   text-decoration: none;
 }
 
@@ -668,6 +681,198 @@ main {
   color: var(--color-error);
 }
 
+/* ---------- Página: Design System ---------- */
+.ds-toc {
+  margin-top: var(--space-lg);
+}
+
+.ds-toc__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.ds-intro {
+  margin-block: var(--space-sm) var(--space-lg);
+  max-width: 65ch;
+}
+
+/* Colores */
+.ds-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+  gap: var(--space-lg);
+}
+
+.swatch figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+.swatch figcaption code {
+  align-self: flex-start;
+}
+
+.swatch figcaption span {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.swatch__color {
+  height: 5rem;
+  border-radius: var(--radius-md);
+  border: var(--border-width) solid var(--color-border);
+}
+
+.swatch--primary       { background-color: var(--color-primary); }
+.swatch--primary-hover { background-color: var(--color-primary-hover); }
+.swatch--secondary     { background-color: var(--color-secondary); }
+.swatch--background    { background-color: var(--color-background); }
+.swatch--surface       { background-color: var(--color-surface); }
+.swatch--border        { background-color: var(--color-border); }
+.swatch--text          { background-color: var(--color-text); }
+.swatch--text-muted    { background-color: var(--color-text-muted); }
+.swatch--on-primary    { background-color: var(--color-on-primary); }
+.swatch--success       { background-color: var(--color-success); }
+.swatch--error         { background-color: var(--color-error); }
+
+/* Tipografía */
+.ds-type__row {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr) 3fr;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.ds-type__row dt {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.ds-type__row dd {
+  margin: 0;
+  min-width: 0;
+}
+
+.ds-sample-sm {
+  font-size: var(--font-size-sm);
+}
+
+/* Espaciado */
+.ds-spacing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.ds-spacing__row {
+  display: grid;
+  grid-template-columns: 7rem 8rem 1fr;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+.ds-spacing__row code {
+  justify-self: start;
+}
+
+.ds-spacing__bar {
+  height: 1rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+}
+
+.ds-spacing__bar--xs { width: var(--space-xs); }
+.ds-spacing__bar--sm { width: var(--space-sm); }
+.ds-spacing__bar--md { width: var(--space-md); }
+.ds-spacing__bar--lg { width: var(--space-lg); }
+.ds-spacing__bar--xl { width: var(--space-xl); }
+
+/* Bordes y sombras */
+.ds-shapes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr));
+  gap: var(--space-lg);
+}
+
+.ds-shape {
+  display: grid;
+  place-items: center;
+  min-height: 8rem;
+  padding: var(--space-md);
+  border: var(--border-width) solid var(--color-border);
+  background-color: var(--color-background);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.ds-shape--radius-sm   { border-radius: var(--radius-sm); }
+.ds-shape--radius-md   { border-radius: var(--radius-md); }
+.ds-shape--radius-full { border-radius: var(--radius-full); }
+.ds-shape--shadow      { border-radius: var(--radius-md); box-shadow: var(--shadow-card); }
+.ds-shape--shadow-hover { border-radius: var(--radius-md); box-shadow: var(--shadow-card-hover); }
+
+/* Componentes */
+.ds-component + .ds-component {
+  margin-top: var(--space-xl);
+}
+
+.ds-component > p {
+  margin-block: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+.ds-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+}
+
+.ds-preview--block {
+  display: block;
+}
+
+.ds-preview--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  align-items: start;
+}
+
+.ds-preview--flush {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* En la vista de ejemplo el menú se muestra siempre en línea */
+.ds-preview .navbar__menu {
+  display: flex;
+  position: static;
+  flex-direction: row;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.ds-footer-inner {
+  padding-inline: var(--space-lg);
+}
+
+.ds-avatar-sm {
+  width: 6rem;
+}
+
 /* ---------- Componente: Footer ---------- */
 .site-footer {
   padding-block: var(--space-lg);
@@ -738,6 +943,23 @@ main {
   .contact {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
+  }
+
+  .ds-type__row {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+
+  .ds-spacing__row {
+    grid-template-columns: 6rem 1fr;
+  }
+
+  .ds-spacing__bar {
+    grid-column: 1 / -1;
+  }
+
+  .ds-preview {
+    padding: var(--space-md);
   }
 }
 

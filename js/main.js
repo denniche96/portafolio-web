@@ -55,7 +55,8 @@ function initTheme() {
 /* ---------- 3. Filtro de proyectos ---------- */
 function initProjectFilter() {
   const buttons = document.querySelectorAll('.filter__button');
-  const cards = document.querySelectorAll('.project-card');
+  // Solo las cards del listado real (no el ejemplo del Design System)
+  const cards = document.querySelectorAll('.projects-grid .project-card');
   const status = document.querySelector('.filter__status');
   if (!buttons.length || !cards.length) return;
 
