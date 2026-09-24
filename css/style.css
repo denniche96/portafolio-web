@@ -305,6 +305,46 @@ main {
   box-shadow: var(--shadow-card);
 }
 
+/* ---------- Componente: Card de resumen (Inicio) ---------- */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--space-lg);
+}
+
+.highlight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  height: 100%;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.highlight:hover {
+  color: var(--color-text);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.highlight__value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  color: var(--color-primary);
+}
+
+.highlight__label {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+}
+
+.highlight__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
 /* ---------- Componente: Card (base reutilizable) ---------- */
 .card {
   padding: var(--space-lg);
