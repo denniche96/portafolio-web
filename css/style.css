@@ -588,12 +588,14 @@ main {
   font-size: var(--font-size-lg);
 }
 
-.project-card__problem {
+.project-card__problem,
+.project-card__role {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
 }
 
-.project-card__problem strong {
+.project-card__problem strong,
+.project-card__role strong {
   color: var(--color-text);
   font-weight: var(--font-weight-medium);
 }
