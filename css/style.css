@@ -1,6 +1,6 @@
 /* ==========================================================================
    style.css — Estilos base y componentes del portafolio
-   Depende de variables.css (cargar antes).
+   Usa las variables (tokens) definidas en variables.css.
    ========================================================================== */
 
 /* ---------- Reset básico ---------- */
