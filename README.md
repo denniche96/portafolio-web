@@ -1,7 +1,7 @@
 # Portafolio Web Personal — Dennisse Cavero
 
-Portafolio web personal e interactivo desarrollado para la tarea S2-TAREA_1 del curso
-**Desarrollo Web [ISO08DW]** de la Universidad Estatal de Milagro (UNEMI).
+Portafolio web personal e interactivo desarrollado para el curso de **Desarrollo Web**
+de la Universidad Estatal de Milagro (UNEMI).
 
 Presenta mi información académica y profesional, mis proyectos destacados y mis
 habilidades técnicas. Está construido con HTML5 semántico, CSS propio y JavaScript,
