@@ -911,7 +911,7 @@ main {
 
 /* ---------- Componente: Footer ---------- */
 .site-footer {
-  padding-block: var(--space-xl) var(--space-lg);
+  padding-block: var(--space-lg) var(--space-md);
   background-color: var(--color-surface);
   border-top: var(--border-width) solid var(--color-border);
   font-size: var(--font-size-sm);
@@ -920,7 +920,7 @@ main {
 
 .site-footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr;
   gap: var(--space-lg);
 }
 
@@ -951,6 +951,13 @@ main {
   gap: var(--space-xs);
 }
 
+/* La navegación va en línea para que el footer sea más bajo */
+.site-footer__list--nav {
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: var(--space-md);
+}
+
 .site-footer__list a {
   color: var(--color-text-muted);
   text-decoration: none;
@@ -962,7 +969,7 @@ main {
 }
 
 .site-footer__bottom {
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
   padding-top: var(--space-md);
   border-top: var(--border-width) solid var(--color-border);
   text-align: center;
@@ -1035,11 +1042,6 @@ main {
 
   .site-footer__grid {
     grid-template-columns: 1fr;
-  }
-
-  .site-footer__list--nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
