@@ -21,7 +21,7 @@ sin frameworks ni librerías de estilos.
 
 | Página | Contenido |
 |---|---|
-| Inicio | Presentación, avatar y resumen con accesos a las demás secciones |
+| Inicio | Presentación, fotografía y resumen con accesos a las demás secciones |
 | Sobre mí | Perfil, datos rápidos y formación académica |
 | Habilidades | Tecnologías organizadas por categoría, sin porcentajes inventados |
 | Proyectos | Tres proyectos académicos en cards reutilizables, con filtro por categoría |
